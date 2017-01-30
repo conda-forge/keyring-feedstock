@@ -37,7 +37,6 @@ test:
         - keyring.util
     commands:
         - keyring --help
-        - cd {{ environ.SRC_DIR }} && python setup.py test -v
     requires:
         - pytest >=2.8
         - pytest-runner
