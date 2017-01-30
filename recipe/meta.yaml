@@ -45,7 +45,7 @@ test:
 
 about:
     home: https://github.com/jaraco/keyring
-    license: Python Software Foundation License or MIT License
+    license: Python Software Foundation or MIT
     summary: 'Store and access your passwords safely.'
 
 extra:
