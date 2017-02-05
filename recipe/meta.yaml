@@ -37,7 +37,6 @@ test:
         - keyring.util
     commands:
         - keyring --help
-        - cd {{ environ.SRC_DIR }} && python setup.py test -v
     requires:
         - pytest >=2.8
         - pytest-runner
@@ -45,7 +44,7 @@ test:
 
 about:
     home: https://github.com/jaraco/keyring
-    license: Python Software Foundation License or MIT License
+    license: Python Software Foundation or MIT
     summary: 'Store and access your passwords safely.'
 
 extra:
