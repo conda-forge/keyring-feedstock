@@ -3,12 +3,15 @@ About keyring
 
 Home: https://github.com/jaraco/keyring
 
-Package license: Python Software Foundation License or MIT License
+Package license: Python Software Foundation or MIT
 
 Feedstock license: BSD 3-Clause
 
 Summary: Store and access your passwords safely.
 
+the python keyring lib provides a easy way to access the system keyring
+service from python.  it can be used in any application that needs safe
+password storage.
 
 
 Current build status
@@ -66,6 +69,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========

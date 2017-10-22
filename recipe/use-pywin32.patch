@@ -1,13 +1,13 @@
 diff --git a/setup.py b/setup.py
-index 2afa185..0d777f9 100644
---- setup.py
-+++ setup.py
-@@ -37,7 +37,7 @@ setup_params = dict(
+index d90977b..d1caf68 100644
+--- a/setup.py
++++ b/setup.py
+@@ -29,7 +29,7 @@ params = dict(
      ],
      extras_require={
-         'test': test_requirements,
--        ':sys_platform=="win32"': ['pywin32-ctypes'],
-+        ':sys_platform=="win32"': ['pywin32'],
-     },
-     setup_requires=[
-         'setuptools_scm>=1.9',
+         ':sys_platform=="win32"': [
+-            'pywin32-ctypes!=0.1.0,!=0.1.1',
++            'pywin32',
+         ],
+         ':sys_platform=="linux2" or sys_platform=="linux"': [
+             "secretstorage",
