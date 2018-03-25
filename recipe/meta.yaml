@@ -21,9 +21,11 @@ requirements:
         - setuptools
         - setuptools_scm >=1.15.0
         - pywin32-ctypes  # [win]
+        - entrypoints
     run:
         - python
         - pywin32-ctypes  # [win]
+        - entrypoints
 
 test:
     imports:
