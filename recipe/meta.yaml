@@ -8,8 +8,6 @@ source:
     fn: keyring-{{ version }}.tar.gz
     url: https://files.pythonhosted.org/packages/source/k/keyring/keyring-{{ version }}.tar.gz
     sha256: fe8ae61626476c554af55036d48360b422a3d32c7c429a93f972219399987b38
-    patches:
-        - verbose-tests.patch
 
 build:
     number: 0
