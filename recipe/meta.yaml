@@ -1,4 +1,4 @@
-{% set version = "9.0" %}
+{% set version = "12.0.0" %}
 
 package:
     name: keyring
@@ -7,10 +7,7 @@ package:
 source:
     fn: keyring-{{ version }}.tar.gz
     url: https://files.pythonhosted.org/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-    sha256: 1c1222298da2100128f821c57096c69cb6cec0d22ba3b66c2859ae95ae473799
-    patches:
-        - verbose-tests.patch
-        - use-pywin32.patch
+    sha256: fe8ae61626476c554af55036d48360b422a3d32c7c429a93f972219399987b38
 
 build:
     number: 0
@@ -22,11 +19,13 @@ requirements:
     build:
         - python
         - setuptools
-        - setuptools_scm >=1.9
-        - pywin32  # [win]
+        - setuptools_scm >=1.15.0
+        - pywin32-ctypes  # [win]
+        - entrypoints
     run:
         - python
-        - pywin32  # [win]
+        - pywin32-ctypes  # [win]
+        - entrypoints
 
 test:
     imports:
@@ -37,10 +36,6 @@ test:
         - keyring.util
     commands:
         - keyring --help
-    requires:
-        - pytest >=2.8
-        - pytest-runner
-        - setuptools_scm >=1.9
 
 about:
     home: https://github.com/jaraco/keyring
@@ -52,7 +47,4 @@ extra:
         - ericdill
         - licode
         - tacaswell
-
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml
+        - ccordoba12
