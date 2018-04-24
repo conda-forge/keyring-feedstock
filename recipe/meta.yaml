@@ -1,4 +1,4 @@
-{% set version = "12.0.1" %}
+{% set version = "12.1.0" %}
 
 package:
     name: keyring
@@ -7,7 +7,7 @@ package:
 source:
     fn: keyring-{{ version }}.tar.gz
     url: https://files.pythonhosted.org/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-    sha256: 846c9c709ee1203bac5444abec19b5228f4601377686f33cba672aa0ba313abd
+    sha256: 4b098f23d78e1bf8517b75a808bb0150c31c7c105bb86e159245e493acbd22aa
 
 build:
     number: 0
