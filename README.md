@@ -14,14 +14,16 @@ Summary: Store and access your passwords safely.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/keyring-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/keyring-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/keyring-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/keyring-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/keyring-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/keyring-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/keyring-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/keyring-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/keyring-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/keyring-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/keyring-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/keyring-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/keyring/badges/version.svg)](https://anaconda.org/conda-forge/keyring)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/keyring/badges/downloads.svg)](https://anaconda.org/conda-forge/keyring)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-keyring-green.svg)](https://anaconda.org/conda-forge/keyring) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/keyring.svg)](https://anaconda.org/conda-forge/keyring) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/keyring.svg)](https://anaconda.org/conda-forge/keyring) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/keyring.svg)](https://anaconda.org/conda-forge/keyring) |
 
 Installing keyring
 ==================
