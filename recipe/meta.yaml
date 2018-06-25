@@ -26,7 +26,7 @@ requirements:
         - python
         - pywin32-ctypes  # [win]
         - entrypoints
-        - secretstorage  # [linux and py>27]
+        - secretstorage  # [linux and py3k]
 
 test:
     imports:
