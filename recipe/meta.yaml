@@ -1,4 +1,4 @@
-{% set version = "12.2.1" %}
+{% set version = "13.0.0" %}
 
 package:
     name: keyring
@@ -7,7 +7,7 @@ package:
 source:
     fn: keyring-{{ version }}.tar.gz
     url: https://files.pythonhosted.org/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-    sha256: 4498eaa2e32fc69a8b36749116b670c379d36a1a9ad4ab107df1e19c8a120ffe
+    sha256: dd188c7d40e6778e18d330a96d0bef77bffc109dad82270133e3969908016862
 
 build:
     number: 0
@@ -26,6 +26,7 @@ requirements:
         - python
         - pywin32-ctypes  # [win]
         - entrypoints
+        - secretstorage  # [linux and py3k]
 
 test:
     imports:
