@@ -1,51 +1,49 @@
 {% set version = "13.2.1" %}
 
 package:
-    name: keyring
-    version: {{ version }}
+  name: keyring
+  version: {{ version }}
 
 source:
-    fn: keyring-{{ version }}.tar.gz
-    url: https://files.pythonhosted.org/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-    sha256: 6364bb8c233f28538df4928576f4e051229e0451651073ab20b315488da16a58
+  url: https://pypi.io/packages/source/k/keyring/keyring-{{ version }}.tar.gz
+  sha256: 6364bb8c233f28538df4928576f4e051229e0451651073ab20b315488da16a58
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record=record.txt
-    entry_points:
-        - keyring=keyring.cli:main
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  entry_points:
+    - keyring = keyring.cli:main
 
 requirements:
-    build:
-        - python
-        - setuptools
-        - setuptools_scm >=1.15.0
-        - pywin32-ctypes  # [win]
-        - entrypoints
-    run:
-        - python
-        - pywin32-ctypes  # [win]
-        - entrypoints
-        - secretstorage  # [linux and py3k]
+  host:
+    - python
+    - pip
+    - setuptools_scm >=1.15.0
+  run:
+    - python
+    - pywin32-ctypes  # [win]
+    - entrypoints
+    - secretstorage  # [linux and py3k]
 
 test:
-    imports:
-        - keyring
-        - keyring.backends
-        - keyring.tests
-        - keyring.tests.backends
-        - keyring.util
-    commands:
-        - keyring --help
+  imports:
+    - keyring
+    - keyring.backends
+    - keyring.tests
+    - keyring.tests.backends
+    - keyring.util
+  commands:
+    - keyring --help
 
 about:
-    home: https://github.com/jaraco/keyring
-    license: Python Software Foundation or MIT
-    summary: 'Store and access your passwords safely.'
+  home: https://github.com/jaraco/keyring
+  license: Python Software Foundation or MIT
+  license_file: LICENSE
+  summary: 'Store and access your passwords safely'
 
 extra:
-    recipe-maintainers:
-        - ericdill
-        - licode
-        - tacaswell
-        - ccordoba12
+  recipe-maintainers:
+    - ericdill
+    - licode
+    - tacaswell
+    - ccordoba12
