@@ -9,7 +9,7 @@ source:
   sha256: a86499736e2e6555618606c2fbc98147e803fa276f990ddba7011eb29a01b5ad
 
 build:
-  number: 0
+  number: 1000
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - keyring = keyring.cli:main
