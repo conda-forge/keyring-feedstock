@@ -10,6 +10,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [py2k]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - keyring = keyring.cli:main
@@ -23,7 +24,7 @@ requirements:
     - python
     - pywin32-ctypes  # [win]
     - entrypoints
-    - secretstorage  # [linux and py3k]
+    - secretstorage
 
 test:
   imports:
