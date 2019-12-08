@@ -30,8 +30,6 @@ test:
   imports:
     - keyring
     - keyring.backends
-    - keyring.tests
-    - keyring.tests.backends
     - keyring.util
   commands:
     - keyring --help
