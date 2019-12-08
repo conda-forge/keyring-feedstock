@@ -1,4 +1,4 @@
-{% set version = "19.2.0" %}
+{% set version = "20.0.0" %}
 
 package:
   name: keyring
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-  sha256: 91037ccaf0c9a112a76f7740e4a416b9457a69b66c2799421581bee710a974b3
+  sha256: fc9cadedae35b77141f670f84c10a657147d2e526348698c93dd77f039979729
 
 build:
   number: 0
@@ -25,13 +25,12 @@ requirements:
     - pywin32-ctypes  # [win]
     - entrypoints
     - secretstorage  # [linux]
+    - importlib_metadata  # [py<38]
 
 test:
   imports:
     - keyring
     - keyring.backends
-    - keyring.tests
-    - keyring.tests.backends
     - keyring.util
   commands:
     - keyring --help
