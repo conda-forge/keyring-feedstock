@@ -25,6 +25,7 @@ requirements:
     - pywin32-ctypes  # [win]
     - entrypoints
     - secretstorage  # [linux]
+    - importlib_metadata  # [py<38]
 
 test:
   imports:
