@@ -1,4 +1,4 @@
-{% set version = "21.1.0" %}
+{% set version = "18.0.1" %}
 
 package:
   name: keyring
@@ -6,12 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-  sha256: 1f393f7466314068961c7e1d508120c092bd71fa54e3d93b76180b526d4abc56
+  sha256: 67d6cc0132bd77922725fae9f18366bb314fd8f95ff4d323a4df41890a96a838
 
 build:
   number: 0
-  skip: True  # [py<36]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - keyring = keyring.cli:main
 
@@ -20,12 +19,17 @@ requirements:
     - python
     - pip
     - setuptools_scm >=1.15.0
+    - setuptools >=34.4
   run:
     - python
-    - pywin32-ctypes  # [win]
     - entrypoints
-    - secretstorage  # [linux]
-    - importlib_metadata  # [py<38]
+
+    - importlib-metadata  # [py<38]
+    - jeepney >=0.4.2  # [linux]
+    - pywin32-ctypes !=0.1.0,!=0.1.1  # [win]
+    - secretstorage  # [linux and py>=35]
+    - secretstorage <3  # [linux and py<35]
+
 
 test:
   imports:
