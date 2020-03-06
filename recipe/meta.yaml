@@ -10,8 +10,8 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<36]
-  script: {{ PYTHON }} -m pip install . -vv
+  skip: True  # [py<36]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - keyring = keyring.cli:main
 
