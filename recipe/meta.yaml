@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   skip: true  # [py<36]
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - keyring = keyring.cli:main
 
@@ -19,7 +19,9 @@ requirements:
   host:
     - python
     - pip
-    - setuptools_scm >=1.15.0
+    - setuptools_scm >=3.4.1
+    - setuptools >=42
+    - toml
   run:
     - python
     - pywin32-ctypes  # [win]
@@ -28,6 +30,10 @@ requirements:
     - importlib_metadata  # [py<38]
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - keyring
     - keyring.backends
