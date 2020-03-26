@@ -32,13 +32,12 @@ requirements:
 test:
   requires:
     - pip
-  commands:
-    - pip check
   imports:
     - keyring
     - keyring.backends
     - keyring.util
   commands:
+    - pip check
     - keyring --help
 
 about:
