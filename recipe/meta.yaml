@@ -9,7 +9,7 @@ source:
   sha256: 9aeadd006a852b78f4b4ef7c7556c2774d2432bbef8ee538a3e9089ac8b11466
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -25,7 +25,6 @@ requirements:
   run:
     - python
     - pywin32-ctypes  # [win]
-    - entrypoints
     - secretstorage  # [linux]
     - importlib_metadata  # [py<38]
 
