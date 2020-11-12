@@ -25,7 +25,7 @@ requirements:
   run:
     - python
     - pywin32-ctypes  # [win]
-    - secretstorage >=3.2 # [linux]
+    - secretstorage >=3.2  # [linux]
     - importlib_metadata >=1  # [py<38]
     - jeepney >=0.4.2  # [linux]
 
@@ -42,7 +42,7 @@ test:
 
 about:
   home: https://github.com/jaraco/keyring
-  license: Python Software Foundation or MIT
+  license: MIT
   license_file: LICENSE
   summary: Store and access your passwords safely
 
