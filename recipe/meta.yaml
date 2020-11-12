@@ -1,4 +1,4 @@
-{% set version = "21.4.0" %}
+{% set version = "21.5.0" %}
 
 package:
   name: keyring
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-  sha256: 9aeadd006a852b78f4b4ef7c7556c2774d2432bbef8ee538a3e9089ac8b11466
+  sha256: 207bd66f2a9881c835dad653da04e196c678bf104f8252141d2d3c4f31051579
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -25,8 +25,9 @@ requirements:
   run:
     - python
     - pywin32-ctypes  # [win]
-    - secretstorage  # [linux]
-    - importlib_metadata  # [py<38]
+    - secretstorage >=3.2  # [linux]
+    - importlib_metadata >=1  # [py<38]
+    - jeepney >=0.4.2  # [linux]
 
 test:
   requires:
@@ -41,7 +42,7 @@ test:
 
 about:
   home: https://github.com/jaraco/keyring
-  license: Python Software Foundation or MIT
+  license: MIT
   license_file: LICENSE
   summary: Store and access your passwords safely
 
