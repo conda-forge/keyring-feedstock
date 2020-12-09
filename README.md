@@ -3,7 +3,7 @@ About keyring
 
 Home: https://github.com/jaraco/keyring
 
-Package license: Python Software Foundation or MIT
+Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/keyring-feedstock/blob/master/LICENSE.txt)
 
