@@ -351,7 +351,6 @@ Feedstock Maintainers
 =====================
 
 * [@ccordoba12](https://github.com/ccordoba12/)
-* [@ericdill](https://github.com/ericdill/)
 * [@licode](https://github.com/licode/)
 * [@tacaswell](https://github.com/tacaswell/)
 
