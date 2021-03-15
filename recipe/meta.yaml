@@ -29,7 +29,7 @@ requirements:
     - python
     - pywin32-ctypes  # [win]
     - secretstorage >=3.2  # [linux]
-    - importlib_metadata >=1  # [py<38]
+    - importlib_metadata >=3.6
     - jeepney >=0.4.2  # [linux]
 
 test:
