@@ -1,4 +1,4 @@
-{% set version = "22.3.0" %}
+{% set version = "22.4.0" %}
 
 package:
   name: keyring
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-  sha256: 16927a444b2c73f983520a48dec79ddab49fe76429ea05b8d528d778c8339522
+  sha256: d981e02d134cc3d636a716fbc3ca967bc9609bae5dc21b0063e4409355993ddf
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - python
     - pywin32-ctypes  # [win]
     - secretstorage >=3.2  # [linux]
-    - importlib_metadata >=1  # [py<38]
+    - importlib_metadata >=3.6
     - jeepney >=0.4.2  # [linux]
 
 test:
