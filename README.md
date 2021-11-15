@@ -321,6 +321,3 @@ Feedstock Maintainers
 * [@licode](https://github.com/licode/)
 * [@tacaswell](https://github.com/tacaswell/)
 
-
-<!-- dummy commit to enable rerendering -->
-
