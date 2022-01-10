@@ -48,6 +48,8 @@ about:
   license: MIT
   license_file: LICENSE
   summary: Store and access your passwords safely
+  dev_url: https://github.com/jaraco/keyring
+  doc_url: https://pypi.org/project/keyring/
 
 extra:
   recipe-maintainers:
