@@ -47,6 +47,7 @@ about:
   home: https://github.com/jaraco/keyring
   license: MIT
   license_file: LICENSE
+  licence_family: MIT
   summary: Store and access your passwords safely
   dev_url: https://github.com/jaraco/keyring
   doc_url: https://pypi.org/project/keyring/
