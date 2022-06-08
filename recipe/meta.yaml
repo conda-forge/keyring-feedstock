@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<36]
+  skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - keyring = keyring.cli:main
@@ -29,7 +29,7 @@ requirements:
     - python
     - pywin32-ctypes  # [win]
     - secretstorage >=3.2  # [linux]
-    - importlib_metadata >=3.6
+    - importlib_metadata  # [py<310]
     - jeepney >=0.4.2  # [linux]
 
 test:
