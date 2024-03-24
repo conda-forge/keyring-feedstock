@@ -9,30 +9,31 @@ source:
   sha256: c3327b6ffafc0e8befbdb597cacdb4928ffe5c1212f7645f186e6d9957a898db
 
 build:
-  number: 0
-  skip: true  # [py<38]
+  number: 1
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - keyring = keyring.cli:main
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.8
     - pip
     - setuptools_scm >=3.4.1
     - setuptools >=56
     - toml
   run:
-    - python
+    - python >=3.8
     - pywin32-ctypes >=0.2.0  # [win]
     - secretstorage >=3.2  # [linux]
     - jeepney >=0.4.2  # [linux]
-    - importlib_metadata >=4.11.4  # [py<312]
+    - importlib_metadata >=4.11.4
     - jaraco.classes
-    - importlib_resources  # [py<39]
+    - importlib_resources
+    - jaraco.functools
+    - jaraco.context
+    - __linux  # [linux]
+    - __win  # [win]
 
 test:
   requires:
