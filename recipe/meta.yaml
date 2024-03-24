@@ -33,6 +33,8 @@ requirements:
     - importlib_metadata >=4.11.4  # [py<312]
     - jaraco.classes
     - importlib_resources  # [py<39]
+    - jaraco.functools
+    - jaracor.context
 
 test:
   requires:
