@@ -34,7 +34,7 @@ requirements:
     - jaraco.classes
     - importlib_resources  # [py<39]
     - jaraco.functools
-    - jaracor.context
+    - jaraco.context
 
 test:
   requires:
