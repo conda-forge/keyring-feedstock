@@ -1,4 +1,4 @@
-{% set version = "25.3.0" %}
+{% set version = "25.4.0" %}
 
 package:
   name: keyring
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-  sha256: 8d85a1ea5d6db8515b59e1c5d1d1678b03cf7fc8b8dcfb1651e8c4a524eb42ef
+  sha256: ae8263fd9264c94f91ad82d098f8a5bb1b7fa71ce0a72388dc4fc0be3f6a034e
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - pywin32-ctypes >=0.2.0  # [win]
     - secretstorage >=3.2  # [linux]
     - jeepney >=0.4.2  # [linux]
-    - importlib_metadata >=4.11.4
+    - importlib-metadata >=4.11.4
     - jaraco.classes
     - importlib_resources
     - jaraco.functools
