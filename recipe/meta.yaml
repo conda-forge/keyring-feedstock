@@ -27,7 +27,7 @@ requirements:
     - pywin32-ctypes >=0.2.0  # [win]
     - secretstorage >=3.2  # [linux]
     - jeepney >=0.4.2  # [linux]
-    - importlib_metadata >=4.11.4
+    - importlib-metadata >=4.11.4
     - jaraco.classes
     - importlib_resources
     - __linux  # [linux]
