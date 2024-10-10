@@ -30,8 +30,6 @@ requirements:
     - importlib_metadata >=4.11.4
     - jaraco.classes
     - importlib_resources
-    - jaraco.functools
-    - jaraco.context
     - __linux  # [linux]
     - __win  # [win]
     - __osx  # [osx]
