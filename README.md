@@ -150,4 +150,5 @@ Feedstock Maintainers
 * [@ccordoba12](https://github.com/ccordoba12/)
 * [@licode](https://github.com/licode/)
 * [@tacaswell](https://github.com/tacaswell/)
+* [@xylar](https://github.com/xylar/)
 
