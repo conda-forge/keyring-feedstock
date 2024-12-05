@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/k/keyring/keyring-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/k/keyring/keyring-{{ version }}.tar.gz
   sha256: 4c753b3ec91717fe713c4edd522d625889d8973a349b0e582622f49766de58e6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -17,13 +17,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools_scm >=3.4.1
     - setuptools >=56
     - toml
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pywin32-ctypes >=0.2.0  # [win]
     - secretstorage >=3.2  # [linux]
     - jeepney >=0.4.2  # [linux]
@@ -39,6 +39,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - keyring
     - keyring.backends
