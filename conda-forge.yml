@@ -1,6 +1,7 @@
 bot:
   abi_migration_branches:
   - v21.2.1
+  inspection: update-grayskull
 noarch_platforms:
   - linux_64
   - osx_64
