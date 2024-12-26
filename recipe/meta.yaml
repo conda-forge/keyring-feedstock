@@ -1,4 +1,4 @@
-{% set version = "25.5.0" %}
+{% set version = "25.6.0" %}
 
 package:
   name: keyring
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/k/keyring/keyring-{{ version }}.tar.gz
-  sha256: 4c753b3ec91717fe713c4edd522d625889d8973a349b0e582622f49766de58e6
+  sha256: 0b39998aa941431eb3d9b0d4b2460bc773b9df6fed7621c2dfb291a7e0187a66
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
